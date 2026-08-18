@@ -102,7 +102,7 @@ export function ToolWorkspace({
                   />
                 ) : field.type === "select" ? (
                   <Select
-                    value={values[field.name]}
+                    value={values[field.name] ?? ""}
                     onValueChange={(val) =>
                       setValues((v) => ({ ...v, [field.name]: val }))
                     }

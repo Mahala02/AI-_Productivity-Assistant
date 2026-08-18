@@ -35,7 +35,7 @@ function NotesPage() {
         { name: "focus", label: "Summary focus", type: "select", options: ["Balanced", "Action items first", "Decisions & rationale", "Executive one-pager"] },
       ]}
       buildPrompt={(v) =>
-        `Summarize the following meeting.\nMeeting: ${v.meeting || "Untitled"}\nAttendees: ${v.attendees || "Not provided"}\nSummary focus: ${v.focus}\n\nRaw notes:\n"""\n${v.notes}\n"""`
+        `Summarize the following meeting.\nMeeting: ${v["meeting"] || "Untitled"}\nAttendees: ${v["attendees"] || "Not provided"}\nSummary focus: ${v["focus"]}\n\nRaw notes:\n"""\n${v["notes"]}\n"""`
       }
     />
   );

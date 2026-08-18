@@ -35,7 +35,7 @@ function ResearchPage() {
         { name: "angle", label: "Specific angles to cover", type: "textarea", rows: 4, placeholder: "Cost, compliance, change management, vendor options" },
       ]}
       buildPrompt={(v) =>
-        `Research topic: ${v.topic}\nAudience: ${v.audience || "General business audience"}\nDepth: ${v.depth}\nAngles to cover: ${v.angle || "Choose the most decision-relevant angles"}`
+        `Research topic: ${v["topic"]}\nAudience: ${v["audience"] || "General business audience"}\nDepth: ${v["depth"]}\nAngles to cover: ${v["angle"] || "Choose the most decision-relevant angles"}`
       }
     />
   );

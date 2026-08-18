@@ -36,7 +36,7 @@ function EmailPage() {
         { name: "sender", label: "Sign-off name & role", placeholder: "Yolanda, Operations Lead" },
       ]}
       buildPrompt={(v) =>
-        `Write a workplace email.\nRecipient/audience: ${v.recipient}\nPurpose and key points: ${v.purpose}\nTone: ${v.tone}\nLength: ${v.length}\nSign off as: ${v.sender || "[Your name]"}\nInclude a subject line first.`
+        `Write a workplace email.\nRecipient/audience: ${v["recipient"]}\nPurpose and key points: ${v["purpose"]}\nTone: ${v["tone"]}\nLength: ${v["length"]}\nSign off as: ${v["sender"] || "[Your name]"}\nInclude a subject line first.`
       }
     />
   );

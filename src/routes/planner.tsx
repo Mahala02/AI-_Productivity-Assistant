@@ -36,7 +36,7 @@ function PlannerPage() {
         { name: "method", label: "Prioritisation style", type: "select", options: ["Impact vs effort", "Eisenhower matrix", "Deadline driven", "MoSCoW"] },
       ]}
       buildPrompt={(v) =>
-        `Create a prioritised work plan.\nGoals and tasks:\n${v.goals}\nHorizon: ${v.horizon}\nAvailable capacity: ${v.capacity || "Not specified"}\nDeadlines and constraints: ${v.constraints || "None given"}\nPrioritisation method: ${v.method}`
+        `Create a prioritised work plan.\nGoals and tasks:\n${v["goals"]}\nHorizon: ${v["horizon"]}\nAvailable capacity: ${v["capacity"] || "Not specified"}\nDeadlines and constraints: ${v["constraints"] || "None given"}\nPrioritisation method: ${v["method"]}`
       }
     />
   );
